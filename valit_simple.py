@@ -45,20 +45,19 @@ def valit(graph, goal):
 
 # First, create the graph.
 # This graph is from Figure 2.8 from Planning Algorithms, 2006 (http://lavalle.pl/planning/).
-G = nx.DiGraph()
-G.add_nodes_from([0, 1, 2, 3, 4])
-G.add_edge(0, 0, weight=2)
-G.add_edge(0, 1, weight=2)
-G.add_edge(1, 2, weight=1)
-G.add_edge(1, 3, weight=4)
-G.add_edge(2, 0, weight=1)
-G.add_edge(2, 3, weight=1)
-G.add_edge(3, 2, weight=1)
-G.add_edge(3, 4, weight=1)
+G2 = nx.DiGraph()
+G2.add_nodes_from([0, 1, 2, 3, 4])
+G2.add_edge(0, 0, weight=2)
+G2.add_edge(0, 1, weight=2)
+G2.add_edge(1, 2, weight=1)
+G2.add_edge(1, 3, weight=4)
+G2.add_edge(2, 0, weight=1)
+G2.add_edge(2, 3, weight=1)
+G2.add_edge(3, 2, weight=1)
+G2.add_edge(3, 4, weight=1)
 
 #This example is a linear bidirectional graph of length g2_length.
-g2_length = 20
-G2 = nx.DiGraph()
+g2_length = 5
 G2.add_nodes_from([i for i in range(g2_length)])
 
 for i in range(g2_length-1):
